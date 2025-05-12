@@ -59,7 +59,7 @@ class StudentController extends Controller
         ]);
 
         $student->update($request->all());
-        return redirect()->route('students.index')->with('success', 'Student updated successfully.');
+        return response()->json(['success' => 'Student updated successfully.']);
     }
 
     public function destroy(Student $student)
